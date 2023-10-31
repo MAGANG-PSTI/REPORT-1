@@ -1,4 +1,4 @@
-<h1>[ PKL Mobile Application Project ]<h1>
+<h1>[ PKL Mobile Application Project ]</h1>
 
 Contributed by:
 
@@ -7,9 +7,9 @@ Contributed by:
 ( README.md akan diupdate setiap perubahan yang terlaksana dan telah di-commit ke REPORT-1. )
 ------------------------------------------
 # Changelog ( 31-10-2023 )
-[~] Changing Application LOGO;
+[+] Changing Application LOGO;
 [+] Adding Onboard screen;
-[!] Organizing syntax and permissions;
-[~] Revamping deprecated LoginPage UI;
+[+] Organizing syntax and permissions;
+[+] Revamping deprecated LoginPage UI;
 ------------------------------------------
 
