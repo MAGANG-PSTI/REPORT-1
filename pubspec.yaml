@@ -1,0 +1,64 @@
+name: pkl_demeter_mobile
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+# Pub Packages.
+  cupertino_icons: ^1.0.2
+  logger: ^2.0.2+1
+  http: ^1.1.0
+  provider: ^6.0.5
+  shared_preferences: ^2.2.2
+  animate_do: ^3.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+ 
+  assets:
+    - ./asset/images/
+  #   - images/a_dot_ham.jpeg
+
+ 
+
+# Fonts using MontSerrat
+  fonts:
+    - family: MontSerrat
+      fonts:
+         - asset: asset/fonts/Montserrat-Black.ttf
+         - asset: asset/fonts/Montserrat-BlackItalic.ttf
+         - asset: asset/fonts/Montserrat-Bold.ttf
+         - asset: asset/fonts/Montserrat-BoldItalic.ttf
+         - asset: asset/fonts/Montserrat-ExtraBold.ttf
+         - asset: asset/fonts/Montserrat-ExtraLight.ttf
+         - asset: asset/fonts/Montserrat-ExtraLightItalic.ttf
+         - asset: asset/fonts/Montserrat-Italic.ttf
+         - asset: asset/fonts/Montserrat-Light.ttf
+         - asset: asset/fonts/Montserrat-LightItalic.ttf
+         - asset: asset/fonts/Montserrat-Medium.ttf
+         - asset: asset/fonts/Montserrat-MediumItalic.ttf
+         - asset: asset/fonts/Montserrat-Regular.ttf
+         - asset: asset/fonts/Montserrat-SemiBold.ttf
+         - asset: asset/fonts/Montserrat-SemiBoldItalic.ttf
+         - asset: asset/fonts/Montserrat-Thin.ttf
+         - asset: asset/fonts/Montserrat-ThinItalic.ttf
