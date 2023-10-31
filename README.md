@@ -14,5 +14,6 @@ Contributed by:
 [+] Organizing syntax and permissions;
 
 [+] Revamping deprecated LoginPage UI;
+
 ------------------------------------------
 
