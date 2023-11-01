@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:pkl_demeter_mobile/auth/services/auth_service.dart';
 import 'package:pkl_demeter_mobile/constants/utils/logger.dart';
+import 'package:pkl_demeter_mobile/constants/utils/tools.dart';
+import 'package:pkl_demeter_mobile/home/widgets/main_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -169,17 +171,12 @@ class _LoginPageState extends State<LoginPage> {
                               Color.fromRGBO(143, 251, 152, 0.6),
                             ])),
                         child: Center(
-                          child: TextButton(
-                              onPressed: () {
-                                signInUser(context);
-                              },
-                              child: Text(
-                                "Sign in",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              )),
-                        ),
+                            child: MainButton(
+                                backgroundColor: Tools.primaryColor,
+                                text: "SIGN UP",
+                                onTap: () {
+                                  signInUser(context);
+                                })),
                       )),
                   SizedBox(
                     height: 70,
