@@ -17,3 +17,12 @@ Contributed by:
 
 ------------------------------------------
 
+# Changelog ( 32-10-2023 )
+
+[+] Adding Landing Page;
+
+[+] Adding few animations;
+
+[+] Sorting widgets and packages;
+
+[+] Minor fix on Authentication;
