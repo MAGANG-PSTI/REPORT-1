@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pkl_demeter_mobile/constants/utils/tools.dart';
 import 'package:pkl_demeter_mobile/home/screens/home_screen.dart';
 import 'package:pkl_demeter_mobile/home/widgets/main_button.dart';
-import 'package:pkl_demeter_mobile/main.dart';
+
 import 'package:pkl_demeter_mobile/provider/user_provider.dart';
 import 'package:provider/provider.dart';
 

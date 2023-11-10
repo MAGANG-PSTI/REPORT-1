@@ -26,3 +26,17 @@ Contributed by:
 [+] Sorting widgets and packages;
 
 [+] Minor fix on Authentication;
+
+# Changelog ( 10-11-2023 ) * MAJOR
+
+[+] Adding Location permission, few packages;
+
+[+] Adding Modal Dialog Box;
+
+[+] Finished Home Page;
+
+[+] Few adjustment throughout syntax;
+
+[+] Initialized .gitattributes;
+
+[+] MORE implemented function, checking permission and responds correspondingly;

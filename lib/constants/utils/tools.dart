@@ -3,11 +3,15 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-const baseUrl = 'http://192.168.7.105:3000';
+// Change baseUrl to your current Wifi IPv-4 Address.
+const baseUrl = 'http://192.168.7.111:3000';
 
 class Tools {
-  static Color primaryColor = Color.fromARGB(255, 0, 216, 36);
+  static const Color primaryColor = Color.fromARGB(255, 0, 216, 36);
   static Color secondaryColor = Colors.greenAccent;
+  static const Color shadow = Color(0xFFbfc9e0);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color black = Color(0xFF000000);
 
   static LinearGradient gradientColor = const LinearGradient(
       end: Alignment.bottomCenter,

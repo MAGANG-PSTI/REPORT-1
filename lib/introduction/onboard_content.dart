@@ -9,10 +9,10 @@ class ContentsOnBoard {
 
 List<ContentsOnBoard> contents = [
   ContentsOnBoard(
-      title: "Demeter strikes!",
+      title: "Demeter Attendances",
       image: "asset/images/onboard1.png",
       desc:
-          "Demeter offers variety of way to record your attendances with ease."),
+          "Demeter offers the easiest of way to record your attendances with ease."),
   ContentsOnBoard(
       title: "Demeter solves it.",
       image: "asset/images/onboard2.png",
