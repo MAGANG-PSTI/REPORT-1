@@ -8,8 +8,10 @@ import 'package:pkl_demeter_mobile/auth/screens/login_page.dart';
 import 'package:pkl_demeter_mobile/auth/services/auth_service.dart';
 import 'package:pkl_demeter_mobile/constants/utils/tools.dart';
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:pkl_demeter_mobile/home/screens/camera_screen.dart';
 import 'package:pkl_demeter_mobile/home/widgets/dialog_box.dart';
 import 'package:pkl_demeter_mobile/provider/user_provider.dart';
+
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
     double width = MediaQuery.of(context).size.width; // Calculating the size of MediaQuery's width.
     
   
- // Prompting the user TO EITHER accept permission's storage.
+    // Prompting the user TO EITHER accept permission's storage.
     Future<bool> askForPermissionStorage(Permission permission) async {
    AndroidDeviceInfo deviceInfo = await DeviceInfoPlugin().androidInfo;
    
@@ -49,32 +51,62 @@ return true;
     return false;
   }
 }
-
    }
+// ----
+
      // Checking IF the STORAGE permission is accepted or NOT.
      void onWarnPermissionStorage(BuildContext context) async {
 bool isAccepted = await askForPermissionStorage(Permission.storage);
 
    if(!isAccepted) {
 DialogBox.dialogWarning(context, "Oops. Looks like you haven't accepted the storage permission just yet.", () { askForPermissionStorage(Permission.storage);}, (){});
-   } else {
-    
    }
     }
+// ----
 
-// Displaying Bottom Sheet for Settings.
-// void showBottomSheetSettings() async {
+   // Prompting the user TO EITHER accept permission's camera.
 
-//   showFlexibleBottomSheet(maxHeight: 1,minHeight: 100,initHeight: 0.5,context: context, builder: builderBody, isDismissible: true,);
+   Future<bool> askForPermissionCamera(Permission permission) async {
+final status = await permission.status;
+if(status.isGranted) {
+  return true;
 
-//   Widget builderBody() {
-//   }
-// }
-    
+} else {
+  var result = await permission.request();
+
+  if(result.isGranted) {
+return true;
+  } else {
+    return false;
+  }
+}
+
+}
+
+// ----
+  // Checking IF the Camera permission is accepted or NOT.
+
+void onWarnPermissionCamera(BuildContext context) async {
+  bool isAccepted = await askForPermissionCamera(Permission.camera);
+
+if(!isAccepted) {
+  DialogBox.dialogWarning(context, "Uh oh, you haven't accepted the camera permissions yet.", (){askForPermissionCamera(Permission.camera); }, (){});
+} else {
+  final navigator = Navigator.of(context);
+                                          navigator.pushAndRemoveUntil(MaterialPageRoute(builder: (context) => CameraScreens()), (route) => false);
+}
+
+}
+
+// ----
+
+  // Displaying Bottom Sheet for Settings.
+
+
+// ----
     @override
 void initState() {
   super.initState();
-  onWarnPermissionStorage(context);
 }
 
    
@@ -92,6 +124,7 @@ void initState() {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
+                            
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
@@ -166,7 +199,7 @@ void initState() {
                                                           FontWeight.w400,
                                                       color: Tools.white)),
                                               GestureDetector(
-                                                  onTap: () {},
+                                                  onTap: () { },
                                                   child: Container(
                                                       width: 100,
                                                       height: 35,
@@ -218,13 +251,14 @@ void initState() {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
+                                      
                                       Text("Take Attendance",
                                           style: TextStyle(
                                               fontSize: 17,
                                               color: Tools.black,
                                               fontWeight: FontWeight.w600)),
                                       InkWell(
-                                          onTap: () {},
+                                          onTap: () { onWarnPermissionCamera(context);},
                                           child: Container(
                                               width: 70,
                                               height: 35,
